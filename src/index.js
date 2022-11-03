@@ -1,8 +1,9 @@
-var maxChallenges = 298
-var requiredChallenges = 270
+import weapons from "../weapons.json" assert {type: 'json'};
+var maxChallenges = 311
+var requiredChallenges = 367
 var completedChallenges = 0
 
-var canBeChecked = maxChallenges
+
 var checked = 0
 
 let AR = []
@@ -16,8 +17,42 @@ let RL = []
 let M = []
 let P = []
 
+function countTrue(weapons) {
+    let foundCompleted = 0
+    weapons.forEach(cat => {
+        cat.guns.forEach(gun =>{
+            gun.challenges.forEach(challenge =>{
+                if (challenge.completed == true) {
+                    foundCompleted++
+                }
+            })
+        })
+    });
+    return foundCompleted
+}
+function countPercentage(requiredChallenges, completedChallenges) {
+    let percentage = 0
+    percentage = Math.round(((completedChallenges / requiredChallenges) * 100) * 100) / 100
+    return percentage
+}
+function countBar(percentage) {
+    let percentageBar = 0
+
+    if (percentage < 100) {
+        percentageBar = Math.round(percentage * 100) / 100
+    }
+    else {
+        percentageBar = 100
+    }
+    return percentageBar
+}
+
+completedChallenges = countTrue(weapons)
+console.log(completedChallenges)
+var percentage = countPercentage(requiredChallenges, completedChallenges)
+var percentageBar = countBar(percentage)
 //const weapons = require('../weapons.json')
-import weapons from "../weapons.json" assert {type: 'json'};
+
 weapons.forEach(cat => {
     let fullName
     if (true) {
@@ -85,54 +120,125 @@ weapons.forEach(cat => {
         }
 
         
-        var x = document.createElement('div')
+        var gunCat = document.createElement('div')
+        gunCat.classList.add(cat.category.toLowerCase() +'-section')
+
         var sectionName = document.createElement('p')
         sectionName.innerHTML = fullName
-        x.classList.add(cat.category)
         sectionName.classList.add("title")
         //x.innerHTML = cat.category
         
         
         cat.guns.forEach(gun => {
-            var y = document.createElement('div')
-            y.classList.add(gun.name.replace(" ",'-').toLowerCase())
-            y.innerHTML = gun.name
-            x.appendChild(y)
+            var gunCompleted = 0
+            var singleGunContainer = document.createElement('div')
+            singleGunContainer.classList.add('singleGunContainer')
+
+            var gunBanner = document.createElement('div')
+            gunBanner.classList.add(gun.name.replace(" ",'-').toLowerCase())
+            gunBanner.innerHTML = gun.name
+
+            var gunChecksContainer = document.createElement('section')
+            gunChecksContainer.classList.add('checkContainer')
+
+            singleGunContainer.appendChild(gunBanner)
+            singleGunContainer.appendChild(gunChecksContainer)
+
+            gunCat.appendChild(singleGunContainer)
+
+            
+
+            singleGunContainer.firstChild.addEventListener('click', function () {
+                
+                gun.challenges.forEach(challenge => {
+                    var checker = document.querySelector('.'+challenge.name + '-camo')
+                    if (challenge.completed == false) {
+                        console.log("hi");
+                        singleGunContainer.lastChild.childNodes.forEach(element => {
+                            element.style.backgroundColor = 'rgb(53, 212, 63)'
+                        });
+                        
+                        console.log(checker)
+                        challenge['completed'] = true
+                        gunCompleted++
+                    }
+                    if (gunCompleted == gun.challenges.length) {
+
+                        singleGunContainer.firstChild.style.backgroundColor = 'rgb(53, 212, 63)'
+                    }
+                    else {
+
+                        singleGunContainer.firstChild.style.backgroundColor = '#484848'
+                    }
+
+                    completedChallenges = countTrue(weapons)
+                    percentage = countPercentage(requiredChallenges, completedChallenges)
+                    percentageBar = countBar(percentage)
+                    console.log(completedChallenges)
+
+                    document.getElementById('percentage').innerHTML = percentage + '%'
+                    document.getElementById('progressBarInner').style.width = (percentageBar+'%').toString()
+                });
+            })
 
             gun.challenges.forEach(challenge => {
-                if (challenge.completed == true) {
-                    completedChallenges++
-                }
-                maxChallenges++
+                var checker = document.createElement('div')
+                checker.classList.add(challenge.name + '-camo')                
+    
+                checker.addEventListener('click', function() {
+                    switch (challenge.completed) {
+                        case true:
+                            challenge['completed'] = false
+                            checker.style.backgroundColor = '#484848'
+                            gunCompleted--
+                            break;
+                    
+                        case false:
+                            challenge['completed'] = true
+                            checker.style.backgroundColor = 'rgb(53, 212, 63)'
+                            gunCompleted++
+                            break;
+                    }
+                    if (gunCompleted == gun.challenges.length) {
+                        checker.parentElement.previousSibling.style.backgroundColor = 'rgb(53, 212, 63)'
+                    }
+                    else {
+                        checker.parentElement.previousSibling.style.backgroundColor = '#484848'
+                    }
+                    
+
+                    
+                    completedChallenges = countTrue(weapons)
+                    percentage = countPercentage(requiredChallenges, completedChallenges)
+                    percentageBar = countBar(percentage)
+                    console.log(completedChallenges)
+                    console.log(percentage);
+                    console.log(percentageBar)
+
+                    document.getElementById('percentage').innerHTML = percentage + '%'
+                    document.getElementById('progressBarInner').style.width = (percentageBar+'%').toString()
+
+                })
+
+                gunChecksContainer.append(checker)
+
+                
             });
         });
+        
 
 
         document.getElementById('gunsContainer').appendChild(sectionName)
-        document.getElementById('gunsContainer').appendChild(x)
+        document.getElementById('gunsContainer').appendChild(gunCat)
         
     }   
 });
+
+document.getElementById('percentage').innerHTML = percentage + '%'
+document.getElementById('progressBarInner').style.width = (percentageBar+'%').toString()
+console.log(checked);
 //console.log(AR, BR, SMG, LMG, S, MR, SR, RL, M, P)
 
-
-var percentageBar
-var percentage = Math.round(((completedChallenges / requiredChallenges) * 100) * 100) / 100
-
-if (percentage < 100) {
-    percentageBar = Math.round(percentage * 100) / 100
-}
-else {
-    percentageBar = 100
-}
-
-
-var width = 0
-var maxWidth = 300
-width = Math.round(((maxWidth / 100) * percentageBar) * 100) / 100
-console.log(percentage)
-console.log(percentageBar);
-console.log(width);
 // console.log(weapons[0].guns[0].challenges)
 // console.log(count);
 // var json = JSON.stringify(weapons);
