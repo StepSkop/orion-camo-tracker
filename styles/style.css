@@ -1,1 +1,44 @@
-/*# sourceMappingURL=style.css.map */
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #121212;
+}
+
+#gunsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5rem 0 5rem;
+  max-width: 54rem;
+}
+#gunsContainer .title {
+  font-family: sans-serif;
+  color: white;
+  font-size: 2rem;
+  width: 100%;
+  text-align: start;
+}
+#gunsContainer div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+#gunsContainer div div {
+  font-family: sans-serif;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  border-radius: 4px;
+  background-color: rgb(23, 202, 32);
+  color: rgb(0, 0, 0);
+  height: 5rem;
+  width: 10rem;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
+}
+#gunsContainer div div:hover {
+  transform: scale(1.05);
+}/*# sourceMappingURL=style.css.map */

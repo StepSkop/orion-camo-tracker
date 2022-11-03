@@ -408,7 +408,7 @@
         "category": "BR",
         "guns": [
             {
-                "name": "Lockwood 300",
+                "name": "FTAC Recon",
                 "challenges": [
                     {
                         "name": "Common",
@@ -448,7 +448,7 @@
                 ]
             },
             {
-                "name": "Expedite 12",
+                "name": "Lachmann-762",
                 "challenges": [
                     {
                         "name": "Common",
@@ -488,7 +488,7 @@
                 ]
             },
             {
-                "name": "Bryson 800",
+                "name": "TAQ-V",
                 "challenges": [
                     {
                         "name": "Common",
@@ -528,7 +528,7 @@
                 ]
             },
             {
-                "name": "Bryson 890",
+                "name": "SO-14",
                 "challenges": [
                     {
                         "name": "Common",
