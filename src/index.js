@@ -95,6 +95,7 @@ weapons.forEach(cat => {
         
         cat.guns.forEach(gun => {
             var y = document.createElement('div')
+            y.classList.add(gun.name.replace(" ",'-').toLowerCase())
             y.innerHTML = gun.name
             x.appendChild(y)
 
