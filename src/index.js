@@ -3,6 +3,48 @@ var maxChallenges = 367
 var requiredChallenges = 339
 var completedChallenges = 0
 
+var weaponsList
+
+weaponsList = JSON.parse(localStorage.getItem("userWeapons"))
+if (localStorage.length == 0) {
+    weaponsList = weapons
+}
+
+document.querySelector('#lsRemover').addEventListener('click', function() {
+    localStorage.setItem("userWeapons",JSON.stringify(weapons))
+    location.reload()
+})
+
+function loadCheckRaw(weaponsList) {
+    weaponsList.forEach(cat => {
+        cat.guns.forEach(gun => {
+            for (let index = 0; index < gun.challenges.length; index++) {
+                var challenge = gun.challenges[index];
+                if (challenge.completed == true) {
+
+                    var childNum = 0
+                    switch (challenge.name) {
+                        case 'Gold':
+                            childNum = 3
+                            break;
+                        case 'Platinum':
+                            childNum = 2
+                            break;
+                        case 'Polyatomic':
+                            childNum = 1
+                            break;
+                        case 'Common':
+                            childNum = 4
+                            break;
+
+                    }
+                    document.querySelector('.W'+gun.name.replace(" ",'-').replace(".","-").toLowerCase() + ' + section :nth-child('+(index +1)+')').style.backgroundColor = 'rgb(53, 212, 63)'
+                }
+            }
+        });
+    });
+} 
+
 
 var checked = 0
 
@@ -47,8 +89,7 @@ function countBar(percentage) {
     return percentageBar
 }
 
-completedChallenges = countTrue(weapons)
-console.log(completedChallenges)
+completedChallenges = countTrue(weaponsList)
 var percentage = countPercentage(requiredChallenges, completedChallenges)
 var percentageBar = countBar(percentage)
 //const weapons = require('../weapons.json')
@@ -66,7 +107,7 @@ var platinumCompleted = {
 }
 var platinumCompletedCount
 var polyatomicCompleted = 0
-weapons.forEach(cat => {
+weaponsList.forEach(cat => {
     let fullName
     if (true) {
         switch (cat.category) {
@@ -232,9 +273,10 @@ weapons.forEach(cat => {
 
             
             gun.challenges.forEach(challenge => {
-                
                 var checker = document.createElement('div')
-                checker.classList.add(challenge.name.toLowerCase() + '-camo')                
+                checker.classList.add(challenge.name.toLowerCase() + '-camo')   
+                
+                           
     
                 checker.style.backgroundColor = '#484848'
                 switch (checker.className) {
@@ -273,13 +315,11 @@ weapons.forEach(cat => {
                                     checker.style.backgroundColor = '#484848'
                                     break;
                             }
-                            gunCompleted--
                             break;
                     
                         case false:
                             challenge['completed'] = true
                             checker.style.backgroundColor = 'rgb(53, 212, 63)'
-                            gunCompleted++
                             break;
                     }
 
@@ -297,7 +337,6 @@ weapons.forEach(cat => {
                         goldsCompleted++
                     } else if (challenge.name == 'Gold' && challenge.completed == false) {
                         goldsCompleted--
-                        gunCompleted--
                     }
                     if (commonCompleted >= gun.challenges.length - 3) {
                         
@@ -318,19 +357,19 @@ weapons.forEach(cat => {
                             if (challenge.name == 'Gold' && challenge.completed == true) {
                                 challenge['completed'] = false
                                 goldsCompleted--
-                                gunCompleted--
                             }
                         });
                     }
+
+                    
                     //platinum camo
                     if (challenge.name == 'Platinum' && challenge.completed == true) {
                         platinumCompleted['plat'+cat.category]++
+
                     } else if (challenge.name == 'Platinum' && challenge.completed == false) {
                         if (platinumCompleted['plat'+cat.category] != 0) {
                             platinumCompleted['plat'+cat.category]--
                         }
-                        
-                        gunCompleted--
                     }
 
                     if (goldsCompleted >= cat.platReq) {
@@ -372,30 +411,39 @@ weapons.forEach(cat => {
                             gun.challenges.forEach(challenge => {
                                 if (challenge.name == 'Platinum' && challenge.completed == true) {
                                     challenge['completed'] = false
-                                    gunCompleted--
                                 }
                             });
                         })
                         
                     }
 
+                    var platValues = Object.values(platinumCompleted);
+                    const platAllCount = platValues.reduce((accumulator, value) => {
+                    return accumulator + value;
+                    }, 0);
 
-                    //IF
-                    // if (platinumCompleted['plat'+cat.category] >= cat.platReq) {
-                    //     document.querySelectorAll('.'+cat.category.toLowerCase()+'-section .polyatomic').forEach(element => {
-                    //         element.style.backgroundColor = 'purple'
-                    //         element.style.pointerEvents = 'none'
-                    //     })
-                    //     cat.guns.forEach(gun =>{
-                    //         gun.challenges.forEach(challenge => {
-                    //             if (challenge.name == 'Platinum' && challenge.completed == false)   {
-                    //                 var fakePlat = document.querySelector('.W'+gun.name.replace(" ",'-').replace(".","-").toLowerCase() + ' + section :nth-last-child(2)')
-                    //                 fakePlat.style.backgroundColor = 'rgba(131, 2, 131, 0.6)'
-                    //                 fakePlat.style.pointerEvents = 'none'
-                    //             }
-                    //         });
-                    //     })
-                    // }
+                    if (platinumCompleted['plat'+cat.category] >= cat.platReq && platAllCount > 51) {
+                        weaponsList.forEach(cat=> {
+                            document.querySelectorAll('.'+cat.category.toLowerCase()+'-section .polyatomic-camo').forEach(element => {
+                                if (element.style.backgroundColor == 'rgba(131, 2, 131, 0.6)') {
+                                    element.style.backgroundColor = 'purple'
+                                }
+                                element.style.pointerEvents = 'all'
+                            })
+
+                            cat.guns.forEach(gun =>{
+                                gun.challenges.forEach(challenge => {
+                                    if (challenge.name == 'Platinum' && challenge.completed == false)   {
+                                        var fakePlat = document.querySelector('.W'+gun.name.replace(" ",'-').replace(".","-").toLowerCase() + ' + section :nth-last-child(1)')
+                                        fakePlat.style.backgroundColor = 'rgba(131, 2, 131, 0.6)'
+                                        fakePlat.style.pointerEvents = 'none'
+                                    }
+                                });
+                            })
+                        });
+                        
+                        
+                    }
                     //IF
 
 
@@ -409,11 +457,12 @@ weapons.forEach(cat => {
 
                     //polyatomic camo
                     // if (challenge.name == 'Polyatomic' && challenge.completed == true) {
-                    //     polyatomicCompleted++
-                    // }
-                    // var platinumCamo = document.querySelector('.'+gun.name.replace(" ",'-').toLowerCase() + ' + section :nth-last-child(1)')
-                    // if (gunCompleted >= gun.challenges.length - 1) {
                         
+                    // }
+
+                    // var platinumCamo = document.querySelector('.W'+gun.name.replace(" ",'-').replace('.','-').toLowerCase() + ' + section :nth-last-child(1)')
+
+                    // if (gunCompleted >= cat.platReq) {
                     //         platinumCamo.style.backgroundColor = 'red'
                     // }
                     // else {
@@ -422,19 +471,21 @@ weapons.forEach(cat => {
                     
                     
 
-                    if (gunCompleted == gun.challenges.length) {
-                        checker.parentElement.previousSibling.style.backgroundColor = 'rgb(53, 212, 63)'
-                    }
-                    else {
-                        checker.parentElement.previousSibling.style.backgroundColor = '#2e2d2d'
-                    }
-                    completedChallenges = countTrue(weapons)
+                    // if (gunCompleted == gun.challenges.length) {
+                    //     checker.parentElement.previousSibling.style.backgroundColor = 'rgb(53, 212, 63)'
+                    // }
+                    // else {
+                    //     checker.parentElement.previousSibling.style.backgroundColor = '#2e2d2d'
+                    // }
+
+
+                    completedChallenges = countTrue(weaponsList)
                     percentage = countPercentage(requiredChallenges, completedChallenges)
                     percentageBar = countBar(percentage)
 
                     document.getElementById('percentage').innerHTML = percentage + '%'
                     document.getElementById('progressBarInner').style.width = (percentageBar+'%').toString()
-
+                    localStorage.setItem("userWeapons", JSON.stringify(weaponsList))
                 })
 
                 gunChecksContainer.append(checker)
@@ -453,6 +504,8 @@ weapons.forEach(cat => {
 
 document.getElementById('percentage').innerHTML = percentage + '%'
 document.getElementById('progressBarInner').style.width = (percentageBar+'%').toString()
+loadCheckRaw(weaponsList)
+localStorage.setItem("userWeapons", JSON.stringify(weaponsList))
 //console.log(AR, BR, SMG, LMG, S, MR, SR, RL, M, P)
 
 // console.log(weapons[0].guns[0].challenges)

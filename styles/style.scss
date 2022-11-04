@@ -21,7 +21,7 @@ html, body {
             align-self: flex-start;
             background-color: rgb(54, 156, 54);
             height: 100%;
-            width: 10%;
+            width: 0%;
         }
         p {
             left: 50%;
@@ -30,6 +30,20 @@ html, body {
             font-family: sans-serif;
         }
     }
+}
+#lsRemover {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    color: white;
+    right: 5rem;
+    top: 2rem;
+    width: 10rem;
+    height: 3rem;
+    background-color: rgba(189, 64, 64, 0.712);
+    border-radius: 3px;
 }
 #gunsContainer {
     display: flex;

@@ -1431,7 +1431,7 @@
     },
     {
         "category": "P",
-        "platReq":4,
+        "platReq":5,
         "guns": [
             {
                 "name": "P890",
