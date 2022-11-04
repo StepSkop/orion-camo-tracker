@@ -938,6 +938,172 @@
         ]
     },
     {
+        "category": "S",
+        "platReq":4,
+        "guns": [
+            {
+                "name": "Lockwood 300",
+                "challenges": [
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Gold",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Platinum",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Polyatomic",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    }
+                ]
+            },
+            {
+                "name": "Expedite 12",
+                "challenges": [
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Gold",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Platinum",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Polyatomic",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    }
+                ]
+            },
+            {
+                "name": "Bryson 800",
+                "challenges": [
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Gold",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Platinum",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Polyatomic",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    }
+                ]
+            },
+            {
+                "name": "Bryson 890",
+                "challenges": [
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Gold",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Platinum",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Polyatomic",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "category": "LMG",
         "platReq":6,
         "guns": [
@@ -1430,212 +1596,6 @@
         ]
     },
     {
-        "category": "P",
-        "platReq":5,
-        "guns": [
-            {
-                "name": "P890",
-                "challenges": [
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Gold",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Platinum",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Polyatomic",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    }
-                ]
-            },
-            {
-                "name": ".50 GS",
-                "challenges": [
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Gold",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Platinum",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Polyatomic",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    }
-                ]
-            },
-            {
-                "name": "X12",
-                "challenges": [
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Gold",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Platinum",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Polyatomic",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    }
-                ]
-            },
-            {
-                "name": "Basilisk",
-                "challenges": [
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Gold",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Platinum",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Polyatomic",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    }
-                ]
-            },
-            {
-                "name": "X13 Auto",
-                "challenges": [
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Gold",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Platinum",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Polyatomic",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    }
-                ]
-            }
-        ]
-    },
-    {
         "category": "SR",
         "platReq":4,
         "guns": [
@@ -1842,11 +1802,11 @@
         ]
     },
     {
-        "category": "S",
-        "platReq":4,
+        "category": "P",
+        "platReq":5,
         "guns": [
             {
-                "name": "Lockwood 300",
+                "name": "P890",
                 "challenges": [
                     {
                         "name": "Common",
@@ -1886,7 +1846,7 @@
                 ]
             },
             {
-                "name": "Expedite 12",
+                "name": ".50 GS",
                 "challenges": [
                     {
                         "name": "Common",
@@ -1926,7 +1886,7 @@
                 ]
             },
             {
-                "name": "Bryson 800",
+                "name": "X12",
                 "challenges": [
                     {
                         "name": "Common",
@@ -1966,7 +1926,7 @@
                 ]
             },
             {
-                "name": "Bryson 890",
+                "name": "Basilisk",
                 "challenges": [
                     {
                         "name": "Common",
@@ -2001,62 +1961,46 @@
                     {
                         "name": "Polyatomic",
                         "reqirements": "Get 40 kills",
-                        "completed": false
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "category": "M",
-        "platReq":2,
-        "guns": [
-            {
-                "name": "Combat Knife",
-                "challenges": [
-                    {
-                        "name": "Common",
-                        "requirements": "Get 40 melee kills.",
-                        "completed": false
-                    },
-                    {
-                        "name": "Gold",
-                        "requirements": "Get 40 melee kills.",
-                        "completed": false
-                    },
-                    {
-                        "name": "Platinum",
-                        "requirements": "Get 40 melee kills.",
-                        "completed": false
-                    },
-                    {
-                        "name": "Polyatomic",
-                        "requirements": "Get 40 melee kills.",
                         "completed": false
                     }
                 ]
             },
             {
-                "name": "Riot Shield",
+                "name": "X13 Auto",
                 "challenges": [
                     {
                         "name": "Common",
-                        "requirements": "Get 40 melee kills.",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
                         "completed": false
                     },
                     {
                         "name": "Gold",
-                        "requirements": "Get 40 melee kills.",
+                        "reqirements": "Get 40 kills",
                         "completed": false
                     },
                     {
                         "name": "Platinum",
-                        "requirements": "Get 40 melee kills.",
+                        "reqirements": "Get 40 kills",
                         "completed": false
                     },
                     {
                         "name": "Polyatomic",
-                        "requirements": "Get 40 melee kills.",
+                        "reqirements": "Get 40 kills",
                         "completed": false
                     }
                 ]
@@ -2144,6 +2088,62 @@
             },
             {
                 "name": "RPG-8",
+                "challenges": [
+                    {
+                        "name": "Common",
+                        "requirements": "Get 40 melee kills.",
+                        "completed": false
+                    },
+                    {
+                        "name": "Gold",
+                        "requirements": "Get 40 melee kills.",
+                        "completed": false
+                    },
+                    {
+                        "name": "Platinum",
+                        "requirements": "Get 40 melee kills.",
+                        "completed": false
+                    },
+                    {
+                        "name": "Polyatomic",
+                        "requirements": "Get 40 melee kills.",
+                        "completed": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "M",
+        "platReq":2,
+        "guns": [
+            {
+                "name": "Combat Knife",
+                "challenges": [
+                    {
+                        "name": "Common",
+                        "requirements": "Get 40 melee kills.",
+                        "completed": false
+                    },
+                    {
+                        "name": "Gold",
+                        "requirements": "Get 40 melee kills.",
+                        "completed": false
+                    },
+                    {
+                        "name": "Platinum",
+                        "requirements": "Get 40 melee kills.",
+                        "completed": false
+                    },
+                    {
+                        "name": "Polyatomic",
+                        "requirements": "Get 40 melee kills.",
+                        "completed": false
+                    }
+                ]
+            },
+            {
+                "name": "Riot Shield",
                 "challenges": [
                     {
                         "name": "Common",

@@ -108,7 +108,7 @@ weaponsList.forEach(cat => {
                 fullName = "Melees"
                 break;
             case "P":
-                fullName = "Pistols"
+                fullName = "Handguns"
                 break;
         }
 
