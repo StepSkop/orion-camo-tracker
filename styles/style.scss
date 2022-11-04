@@ -11,7 +11,7 @@ html, body {
         bottom: 0;
         width: 100%;
         height: 3rem;
-        background-color: #2e2d2d;
+        background-color: #272727;
         justify-content: center;
         align-items: center;
         #progressBarInner {
@@ -82,7 +82,7 @@ html, body {
     transition: 0.3s ease-in-out;
     display: flex;
     border-radius: 4px;
-    background-color: #484848;
+    background-color: #2e2d2d;
     color: rgb(255, 255, 255);
     height: 5rem;
     width: 20rem;
@@ -91,7 +91,7 @@ html, body {
     justify-content: center;
     text-align: center;
     border: 100%;
-    border-style: solid;
+    //border-style: solid;
     border-color: rgb(53, 212, 63);
 }
 .singleGunContainer > div:hover {
@@ -106,7 +106,8 @@ html, body {
     
 }
 .polyatomic-camo {
-    background-color: purple; 
+    pointer-events: none;
+    background-color: rgba(131, 2, 131, 0.6); 
 }
 .platinum-camo {
     pointer-events: none;
@@ -117,5 +118,5 @@ html, body {
     background-color: rgba(255, 217, 0, 0.6);
 }
 .common-camo {
-    background-color: #484848;
+    background-color: #2e2d2d;
 }
