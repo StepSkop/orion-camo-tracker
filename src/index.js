@@ -79,7 +79,39 @@ var polyatomicCompleted = 0
 weaponsList.forEach(cat => {
     let fullName
     if (true) {
-        
+        switch (cat.category) {
+            case "AR":
+                fullName = "Assault Rifles"
+                break;
+            case "BR":
+                fullName = "Battle Rifles"
+                break;
+            case "SMG":
+                fullName = "Sub machine guns"
+                break;
+            case "LMG":
+                fullName = "Light machine guns"
+                break;
+            case "S":
+                fullName = "Shotguns"
+                break;
+            case "MR":
+                fullName = "Marksman Rifles"
+                break;
+             case "SR":
+                fullName = "Sniper Rifles"
+                break;
+            case "RL":
+                fullName = "Rocket Launchers"
+                break;
+            case "M":
+                fullName = "Melees"
+                break;
+            case "P":
+                fullName = "Pistols"
+                break;
+        }
+
         var gunCat = document.createElement('div')
         gunCat.classList.add(cat.category.toLowerCase() +'-section')
 

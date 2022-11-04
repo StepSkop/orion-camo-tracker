@@ -32,6 +32,7 @@ html, body {
     }
 }
 #lsRemover {
+    cursor: pointer;
     position: absolute;
     display: flex;
     align-items: center;
@@ -49,7 +50,7 @@ html, body {
 #lsRemover:hover{
     transition: all ease-in-out 0.25s;
     background-color: rgba(189, 64, 64, 0.466);
-    
+
 }
 #gunsContainer {
     display: flex;
@@ -92,6 +93,7 @@ html, body {
         aspect-ratio: 1 / 1;
     }
     section div:hover{
+        cursor: pointer;
         transform: scale(1.05);
     }
     

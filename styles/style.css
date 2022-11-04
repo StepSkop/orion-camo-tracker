@@ -33,6 +33,7 @@ html .progressBar p, body .progressBar p {
 }
 
 #lsRemover {
+  cursor: pointer;
   position: absolute;
   display: flex;
   align-items: center;
@@ -95,6 +96,7 @@ html .progressBar p, body .progressBar p {
   aspect-ratio: 1/1;
 }
 .singleGunContainer section div:hover {
+  cursor: pointer;
   transform: scale(1.05);
 }
 
