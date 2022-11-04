@@ -4,6 +4,7 @@ html, body {
   align-items: center;
   background-color: #121212;
   flex-direction: column;
+  padding-bottom: 3rem;
 }
 html .progressBar, body .progressBar {
   position: fixed;
@@ -11,7 +12,7 @@ html .progressBar, body .progressBar {
   bottom: 0;
   width: 100%;
   height: 3rem;
-  background-color: #484848;
+  background-color: #2e2d2d;
   justify-content: center;
   align-items: center;
 }
@@ -70,7 +71,6 @@ html .progressBar p, body .progressBar p {
 .singleGunContainer section div {
   transition: all ease-in-out 0.2s;
   border-radius: 3px;
-  background-color: #484848;
   width: 12.1428571429%;
   aspect-ratio: 1/1;
 }
@@ -105,4 +105,22 @@ html .progressBar p, body .progressBar p {
   display: flex;
   width: 100%;
   height: 3rem;
+}
+
+.polyatomic-camo {
+  background-color: purple;
+}
+
+.platinum-camo {
+  pointer-events: none;
+  background-color: rgba(192, 192, 192, 0.6);
+}
+
+.gold-camo {
+  pointer-events: none;
+  background-color: rgba(255, 217, 0, 0.6);
+}
+
+.common-camo {
+  background-color: #484848;
 }/*# sourceMappingURL=style.css.map */

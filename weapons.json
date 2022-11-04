@@ -1,6 +1,7 @@
 [
     {
         "category": "AR",
+        "platReq":8,
         "guns": [
             {
                 "name": "M4",
@@ -406,6 +407,7 @@
     },
     {
         "category": "BR",
+        "platReq":4,
         "guns": [
             {
                 "name": "FTAC Recon",
@@ -571,6 +573,7 @@
     },
     {
         "category": "SMG",
+        "platReq":8,
         "guns": [
             {
                 "name": "Lachmann Sub",
@@ -936,6 +939,7 @@
     },
     {
         "category": "LMG",
+        "platReq":6,
         "guns": [
             {
                 "name": "Sakin MG38",
@@ -1181,6 +1185,7 @@
     },
     {
         "category": "MR",
+        "platReq":6,
         "guns": [
             {
                 "name": "EBR-14",
@@ -1426,6 +1431,7 @@
     },
     {
         "category": "P",
+        "platReq":4,
         "guns": [
             {
                 "name": "P890",
@@ -1631,6 +1637,7 @@
     },
     {
         "category": "SR",
+        "platReq":4,
         "guns": [
             {
                 "name": "MCPR-300",
@@ -1836,6 +1843,7 @@
     },
     {
         "category": "S",
+        "platReq":4,
         "guns": [
             {
                 "name": "Lockwood 300",
@@ -2001,6 +2009,7 @@
     },
     {
         "category": "M",
+        "platReq":2,
         "guns": [
             {
                 "name": "Combat Knife",
@@ -2056,6 +2065,7 @@
     },
     {
         "category": "RL",
+        "platReq":4,
         "guns": [
             {
                 "name": "Pila",
