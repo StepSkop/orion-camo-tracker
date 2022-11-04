@@ -45,6 +45,12 @@ html, body {
     background-color: rgba(189, 64, 64, 0.712);
     border-radius: 3px;
 }
+
+#lsRemover:hover{
+    transition: all ease-in-out 0.25s;
+    background-color: rgba(189, 64, 64, 0.466);
+    
+}
 #gunsContainer {
     display: flex;
     flex-direction: column;
@@ -108,10 +114,7 @@ html, body {
     //border-style: solid;
     border-color: rgb(53, 212, 63);
 }
-.singleGunContainer > div:hover {
-    transform: scale(1.05);
-    transition: all ease-in-out 0.2s;
-}
+
 .checkContainer {
     
     display: flex;
