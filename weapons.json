@@ -124,86 +124,6 @@
                 ]
             },
             {
-                "name": "Kastov 545",
-                "challenges": [
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Gold",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Platinum",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Polyatomic",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    }
-                ]
-            },
-            {
-                "name": "Kastov 74u",
-                "challenges": [
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Gold",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Platinum",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Polyatomic",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    }
-                ]
-            },
-            {
                 "name": "Lachmann-556",
                 "challenges": [
                     {
@@ -285,6 +205,86 @@
             },
             {
                 "name": "M16",
+                "challenges": [
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Gold",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Platinum",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Polyatomic",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    }
+                ]
+            },
+            {
+                "name": "Kastov 74u",
+                "challenges": [
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Gold",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Platinum",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Polyatomic",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    }
+                ]
+            },
+            {
+                "name": "Kastov 545",
                 "challenges": [
                     {
                         "name": "Common",
@@ -410,7 +410,7 @@
         "platReq":4,
         "guns": [
             {
-                "name": "FTAC Recon",
+                "name": "Lachmann-762",
                 "challenges": [
                     {
                         "name": "Common",
@@ -450,7 +450,7 @@
                 ]
             },
             {
-                "name": "Lachmann-762",
+                "name": "SO-14",
                 "challenges": [
                     {
                         "name": "Common",
@@ -530,7 +530,7 @@
                 ]
             },
             {
-                "name": "SO-14",
+                "name": "FTAC Recon",
                 "challenges": [
                     {
                         "name": "Common",
@@ -576,6 +576,86 @@
         "platReq":8,
         "guns": [
             {
+                "name": "Vel 46",
+                "challenges": [
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Gold",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Platinum",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Polyatomic",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    }
+                ]
+            },
+            {
+                "name": "MX9",
+                "challenges": [
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Gold",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Platinum",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Polyatomic",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    }
+                ]
+            },
+            {
                 "name": "Lachmann Sub",
                 "challenges": [
                     {
@@ -616,7 +696,127 @@
                 ]
             },
             {
+                "name": "Vaznev-9K",
+                "challenges": [
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Gold",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Platinum",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Polyatomic",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    }
+                ]
+            },
+            {
                 "name": "FSS Hurricane",
+                "challenges": [
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Gold",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Platinum",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Polyatomic",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    }
+                ]
+            },
+            {
+                "name": "MINIBAK",
+                "challenges": [
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Gold",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Platinum",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Polyatomic",
+                        "reqirements": "Get 40 kills",
+                        "completed": false
+                    }
+                ]
+            },
+            {
+                "name": "PDSW-528",
                 "challenges": [
                     {
                         "name": "Common",
@@ -697,206 +897,6 @@
             },
             {
                 "name": "BAS-P",
-                "challenges": [
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Gold",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Platinum",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Polyatomic",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    }
-                ]
-            },
-            {
-                "name": "MX9",
-                "challenges": [
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Gold",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Platinum",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Polyatomic",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    }
-                ]
-            },
-            {
-                "name": "MINIBAK",
-                "challenges": [
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Gold",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Platinum",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Polyatomic",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    }
-                ]
-            },
-            {
-                "name": "Vel 46",
-                "challenges": [
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Gold",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Platinum",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Polyatomic",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    }
-                ]
-            },
-            {
-                "name": "PDSW-528",
-                "challenges": [
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Common",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Gold",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Platinum",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    },
-                    {
-                        "name": "Polyatomic",
-                        "reqirements": "Get 40 kills",
-                        "completed": false
-                    }
-                ]
-            },
-            {
-                "name": "Vaznev-9K",
                 "challenges": [
                     {
                         "name": "Common",
@@ -1554,7 +1554,7 @@
                 ]
             },
             {
-                "name": "MAQ-M",
+                "name": "TAQ-M",
                 "challenges": [
                     {
                         "name": "Common",
@@ -2087,7 +2087,7 @@
                 ]
             },
             {
-                "name": "RPG-8",
+                "name": "RPG-7",
                 "challenges": [
                     {
                         "name": "Common",
