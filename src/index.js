@@ -3,30 +3,45 @@ var maxChallenges = 367
 var requiredChallenges = 339
 var completedChallenges = 0
 
+var weaponsAlt = JSON.stringify(weapons)
 var weaponsList
-
-weaponsList = JSON.parse(localStorage.getItem("userWeapons"))
+var userList
 if (localStorage.length == 0) {
-    weaponsList = weapons
+    console.log("hi");
+    userList = weapons
+} else {
+    userList = JSON.parse(localStorage.getItem("userWeapons"))
 }
 
 document.querySelector('#lsRemover').addEventListener('click', function() {
     localStorage.setItem("userWeapons",JSON.stringify(weapons))
     location.reload()
 })
+weaponsList = loadCheckRaw(userList, weaponsAlt, 0)
 
-function loadCheckRaw(weaponsList) {
-    weaponsList.forEach(cat => {
-        cat.guns.forEach(gun => {
-            for (let index = 0; index < gun.challenges.length; index++) {
-                var challenge = gun.challenges[index];
+
+function loadCheckRaw(a, b, c) {
+    var x = JSON.parse(b)
+    for (let C = 0; C< a.length; C++) {
+        const cat = a[C];
+        for (let G = 0; G < cat.guns.length; G++) {
+            const gun = cat.guns[G];
+            for (let CH = 0; CH < gun.challenges.length; CH++) {
+                const challenge = gun.challenges[CH];
                 if (challenge.completed == true) {
-                    document.querySelector('.W'+gun.name.replace(" ",'-').replace(".","-").toLowerCase() + ' + section :nth-child('+(index +1)+')').style.backgroundColor = 'rgb(53, 212, 63)'
+                    x[C].guns[G].challenges[CH]['completed'] = true
+                    if (c == 1) {
+                        document.querySelector('.W'+gun.name.replace(" ",'-').replace(".","-").toLowerCase() + ' + section :nth-child('+(CH + 1 )+')').style.backgroundColor = 'rgb(53, 212, 63)'
+                    }
                 }
+
+                
             }
-        });
-    });
-} 
+            
+        }
+    }
+    return x
+}
 
 function countTrue(weapons) {
     let foundCompleted = 0
@@ -87,7 +102,7 @@ weaponsList.forEach(cat => {
                 fullName = "Battle Rifles"
                 break;
             case "SMG":
-                fullName = "Sub machine guns"
+                fullName = "Submachine guns"
                 break;
             case "LMG":
                 fullName = "Light machine guns"
@@ -145,13 +160,13 @@ weaponsList.forEach(cat => {
                 checker.style.backgroundColor = '#484848'
                 switch (checker.className) {
                     case "polyatomic-camo":
-                        checker.style.backgroundColor = 'rgba(131, 2, 131, 0.6)'
+                        checker.style.backgroundColor = 'rgba(131, 2, 131, 0.6)' //dark purple
                         break;
                     case "gold-camo":
-                        checker.style.backgroundColor = 'rgba(255, 217, 0, 0.6)'
+                        checker.style.backgroundColor = 'rgba(255, 217, 0, 0.6)' //dark gold
                         break;
                     case "platinum-camo":
-                        checker.style.backgroundColor = 'rgba(192, 192, 192, 0.6)'
+                        checker.style.backgroundColor = 'rgba(192, 192, 192, 0.6)' //dark plat
                         break;
                     case 'common-camo':
                         checker.style.backgroundColor = '#484848'
@@ -167,13 +182,13 @@ weaponsList.forEach(cat => {
                             checker.style.backgroundColor = '#484848'
                             switch (checker.className) {
                                 case "polyatomic-camo":
-                                    checker.style.backgroundColor = 'purple'
+                                    checker.style.backgroundColor = 'rgba(131, 2, 131, 0.6)' //dark purple
                                     break;
                                 case "gold-camo":
-                                    checker.style.backgroundColor = 'rgba(255, 217, 0, 0.6)'
+                                    checker.style.backgroundColor = 'rgba(255, 217, 0, 0.6)' //dark gold
                                     break;
                                 case "platinum-camo":
-                                    checker.style.backgroundColor = 'rgba(192, 192, 192, 0.6)'
+                                    checker.style.backgroundColor = 'rgba(192, 192, 192, 0.6)' //dark plat
                                     break;
                                 case 'common-camo':
                                     checker.style.backgroundColor = '#484848'
@@ -326,8 +341,7 @@ weaponsList.forEach(cat => {
         
     }   
 });
-
+loadCheckRaw(userList, weaponsAlt, 1)
 document.getElementById('percentage').innerHTML = percentage + '%'
 document.getElementById('progressBarInner').style.width = (percentageBar+'%').toString()
-loadCheckRaw(weaponsList)
 localStorage.setItem("userWeapons", JSON.stringify(weaponsList))
