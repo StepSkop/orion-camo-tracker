@@ -213,7 +213,7 @@ header {
     }
     header{
         .logo {
-            width: 40%;
+            width: 50%;
             img {
                 height: 2rem;
                 width: auto;
@@ -229,9 +229,9 @@ header {
         }
     }
     header .nav {
-        width: 20%;
+        display: none;
     }
     header .removeButtonCont {
-        width: 40%;
+        width: 50%;
     }
 }
