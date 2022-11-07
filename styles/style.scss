@@ -4,6 +4,11 @@
 }
 
 html, body {
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-y: scroll;
+
     font-family: dosis-bold;
     letter-spacing: 1px;
     font-weight: bold;
@@ -42,6 +47,10 @@ html, body {
             
         }
     }
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 header {

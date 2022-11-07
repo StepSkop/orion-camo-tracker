@@ -3,6 +3,9 @@
   src: url(/fonts/DosisBold-OLR6.ttf);
 }
 html, body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-y: scroll;
   font-family: dosis-bold;
   letter-spacing: 1px;
   font-weight: bold;
@@ -38,6 +41,10 @@ html .progressBar #progressBarInner, body .progressBar #progressBarInner {
 html .progressBar p, body .progressBar p {
   position: absolute;
   color: white;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 header {
