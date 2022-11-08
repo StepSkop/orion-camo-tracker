@@ -1,7 +1,9 @@
-import weapons from "../weapons.json" assert {type: 'json'};
+import weapons from "../updatedWeapons.json" assert {type: 'json'};
 var maxChallenges = 367
 var requiredChallenges = 339
 var completedChallenges = 0
+
+
 
 var weaponsAlt = JSON.stringify(weapons)
 var weaponsList
@@ -217,9 +219,27 @@ weaponsList.forEach(cat => {
             gunCat.appendChild(singleGunContainer)
             
             gun.challenges.forEach(challenge => {
+                if (cat.category == 'AR' && challenge.name == 'Gold') {
+                    challenge['reqirements'] = 'Gold - Get 3 kills without dying 10 times'
+                }
+
                 var checker = document.createElement('div')
                 checker.classList.add(challenge.name.toLowerCase() + '-camo')   
                 
+                var reqCont = document.createElement('div')
+                reqCont.classList.add('reqCont')
+                
+
+                var requirements = document.createElement('div')
+                requirements.classList.add(gun.name.replace(" ",'-').replace(".","-").toLowerCase() + '-' + challenge.name.toLowerCase())
+                requirements.innerHTML = challenge.reqirements
+
+                reqCont.appendChild(requirements)
+                checker.appendChild(reqCont)
+
+                if (gun.name == 'Riot Shield') {
+                    //console.log(challenge);
+                }
                 checker.style.backgroundColor = '#484848'
                 switch (checker.className) {
                     case "polyatomic-camo":
@@ -242,7 +262,7 @@ weaponsList.forEach(cat => {
                 if (challenge.name == 'Platinum' && challenge.completed == true) {
                     platinumCompleted['plat'+cat.category]++
                 }
-
+                
                 checker.addEventListener('click', function() {
                     
                     var commonCompleted = 0
@@ -274,6 +294,8 @@ weaponsList.forEach(cat => {
 
                     
                     gun.challenges.forEach(challenge => {
+
+                        
                         if (challenge.name == 'Common' && challenge.completed == true) {
                             commonCompleted++
                         }
@@ -296,7 +318,7 @@ weaponsList.forEach(cat => {
                     }
                     else {
                         goldCamo.style.backgroundColor = 'rgba(255, 217, 0, 0.6)'
-                        goldCamo.style.pointerEvents = 'none'
+                        //goldCamo.style.pointerEvents = 'none'
                         
                     }
                     
@@ -337,7 +359,7 @@ weaponsList.forEach(cat => {
                                         var fakePlat = document.querySelector('.W'+gun.name.replace(" ",'-').replace(".","-").toLowerCase() + ' + section :nth-last-child(2)')
                                         
                                         fakePlat.style.backgroundColor = 'rgba(192, 192, 192, 0.6)'
-                                        fakePlat.style.pointerEvents = 'none'
+                                        //fakePlat.style.pointerEvents = 'none'
                                     }
                                 });
                             })
@@ -350,7 +372,7 @@ weaponsList.forEach(cat => {
                         document.querySelectorAll('.'+cat.category.toLowerCase()+'-section .platinum-camo').forEach(element => {
                             element.style.backgroundColor = 'rgba(192, 192, 192, 0.6)'
                             
-                            element.style.pointerEvents = 'none'
+                            //element.style.pointerEvents = 'none'
                         })
                     }
 
@@ -402,7 +424,7 @@ weaponsList.forEach(cat => {
                                             }
                                         });
                                         fakePlat.style.backgroundColor = 'rgba(131, 2, 131, 0.6)'
-                                        fakePlat.style.pointerEvents = 'none'
+                                        //fakePlat.style.pointerEvents = 'none'
                                     }
                                 });
                             })
@@ -416,7 +438,7 @@ weaponsList.forEach(cat => {
                             
                             document.querySelectorAll('.'+cat.category.toLowerCase()+'-section .polyatomic-camo').forEach(element => {
                                 element.style.backgroundColor = 'rgba(131, 2, 131, 0.6)'
-                                element.style.pointerEvents = 'none'
+                                //element.style.pointerEvents = 'none'
                             })
                             cat.guns.forEach(gun => {
                                 gun.challenges.forEach(challenge => {

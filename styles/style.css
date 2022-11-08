@@ -139,7 +139,7 @@ header .removeButtonCont {
   width: 20rem;
   height: auto;
 }
-.singleGunContainer section div {
+.singleGunContainer section > div {
   transition: all ease-in-out 0.2s;
   border-radius: 3px;
   width: 12.1428571429%;
@@ -148,6 +148,9 @@ header .removeButtonCont {
 .singleGunContainer section div:hover {
   cursor: pointer;
   transform: scale(1.05);
+}
+.singleGunContainer section div:hover div {
+  display: flex;
 }
 
 .singleGunContainer > div {
@@ -170,6 +173,41 @@ header .removeButtonCont {
   display: flex;
   width: 100%;
   height: 3rem;
+}
+.checkContainer > div {
+  pointer-events: all;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.checkContainer > div .reqCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: all;
+  position: relative;
+  display: flex;
+  color: white;
+  width: 100%;
+}
+.checkContainer > div .reqCont div {
+  pointer-events: all;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  top: 1.5rem;
+  display: none;
+  background-color: #222222;
+  padding: 3px 5px 3px 5px;
+  border-radius: 4px;
+}
+.checkContainer > div .reqCont:hover div {
+  display: flex;
 }
 
 .polyatomic-camo {
@@ -201,7 +239,7 @@ header .removeButtonCont {
     font-size: 0.8rem;
   }
   header .logo {
-    width: 40%;
+    width: 50%;
   }
   header .logo img {
     height: 2rem;
@@ -211,9 +249,9 @@ header .removeButtonCont {
     font-size: 1rem;
   }
   header .nav {
-    width: 20%;
+    display: none;
   }
   header .removeButtonCont {
-    width: 40%;
+    width: 50%;
   }
 }/*# sourceMappingURL=style.css.map */
