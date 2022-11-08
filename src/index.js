@@ -219,9 +219,7 @@ weaponsList.forEach(cat => {
             gunCat.appendChild(singleGunContainer)
             
             gun.challenges.forEach(challenge => {
-                if (cat.category == 'AR' && challenge.name == 'Gold') {
-                    challenge['reqirements'] = 'Gold - Get 3 kills without dying 10 times'
-                }
+        
 
                 var checker = document.createElement('div')
                 checker.classList.add(challenge.name.toLowerCase() + '-camo')   
@@ -232,7 +230,7 @@ weaponsList.forEach(cat => {
 
                 var requirements = document.createElement('div')
                 requirements.classList.add(gun.name.replace(" ",'-').replace(".","-").toLowerCase() + '-' + challenge.name.toLowerCase())
-                requirements.innerHTML = challenge.reqirements
+                requirements.innerHTML = challenge.requirements
 
                 reqCont.appendChild(requirements)
                 checker.appendChild(reqCont)
