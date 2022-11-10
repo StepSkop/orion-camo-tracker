@@ -227,7 +227,6 @@ weaponsList.forEach(cat => {
                 var reqCont = document.createElement('div')
                 reqCont.classList.add('reqCont')
                 
-
                 var requirements = document.createElement('div')
                 requirements.classList.add(gun.name.replace(" ",'-').replace(".","-").toLowerCase() + '-' + challenge.name.toLowerCase())
                 requirements.innerHTML = challenge.requirements
@@ -469,6 +468,6 @@ weaponsList.forEach(cat => {
     }   
 });
 loadCheckRaw(userList, weaponsAlt, 1, platinumCompleted)
-document.getElementById('percentage').innerHTML = percentage + '%'
+document.getElementById('percentage').innerHTML = 'Orion camo: '+ percentage + '%'
 document.getElementById('progressBarInner').style.width = (percentageBar+'%').toString()
 localStorage.setItem("userWeapons", JSON.stringify(weaponsList))

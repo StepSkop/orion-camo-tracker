@@ -34,7 +34,7 @@ html .progressBar #progressBarInner, body .progressBar #progressBarInner {
   position: fixed;
   left: 0;
   align-self: flex-start;
-  background-color: rgb(54, 156, 54);
+  background-color: rgb(101, 28, 191);
   height: 100%;
   width: 0%;
 }
