@@ -94,7 +94,7 @@ header .removeButtonCont label {
   border-radius: 5px;
 }
 header .removeButtonCont label:hover {
-  transition: all ease-in-out 0.1s;
+  transition: all ease-in-out 0.2s;
   background-color: rgba(255, 255, 255, 0.618);
 }
 
@@ -116,7 +116,7 @@ input[type=file] {
 }
 
 #lsRemover:hover {
-  transition: all ease-in-out 0.1s;
+  transition: all ease-in-out 0.2s;
   background-color: rgba(189, 64, 64, 0.466);
 }
 
@@ -256,14 +256,20 @@ input[type=file] {
     width: -moz-min-content;
     width: min-content;
   }
+  #gunsContainer p:first-child {
+    margin-top: 1rem;
+  }
   #lsRemover {
     font-size: 0.8rem;
+    height: 2rem;
   }
   #lsExp {
     font-size: 0.8rem;
+    height: 2rem;
   }
   #lsImp {
     font-size: 0.8rem;
+    height: 2rem;
   }
   header .logo {
     width: 50%;
@@ -273,12 +279,14 @@ input[type=file] {
     width: auto;
   }
   header .logo p {
-    font-size: 1rem;
+    line-height: 1rem;
+    font-size: 1.1rem;
   }
   header .nav {
     display: none;
   }
   header .removeButtonCont {
     width: 50%;
+    gap: 0.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
