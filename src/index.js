@@ -22,6 +22,19 @@ var platinumCompleted = {
     "platM":0
 }
 
+let fileInput = document.querySelector('#lsImp')
+
+function onChange(event) {
+    var reader = new FileReader();
+    reader.onload = onReaderLoad;
+    reader.readAsText(event.target.files[0]);
+}
+function onReaderLoad(event){
+    localStorage.setItem("userWeapons", event.target.result)
+    location.reload()
+}
+fileInput.addEventListener('change', onChange)
+
 if (localStorage.length == 0) {
     console.log("hi");
     userList = weapons
@@ -33,9 +46,25 @@ document.querySelector('#lsRemover').addEventListener('click', function() {
     localStorage.setItem("userWeapons",JSON.stringify(weapons))
     location.reload()
 })
+
+let fileExport = document.querySelector('#lsExp')
+
+
+fileExport.addEventListener('click', function downloadObjectAsJson(){
+    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(localStorage.getItem('userWeapons'));
+    var downloadAnchorNode = document.createElement('a');
+    var d = new Date();
+    d = new Date(d.getTime() - 3000000);
+
+
+    downloadAnchorNode.setAttribute("href",     dataStr);
+    downloadAnchorNode.setAttribute("download", 'orion_'+ new Date().toISOString().split('T')[0] + ".json");
+    document.body.appendChild(downloadAnchorNode); // required for firefox
+    downloadAnchorNode.click();
+    downloadAnchorNode.remove();
+  })
+
 weaponsList = loadCheckRaw(userList, weaponsAlt, 0, platinumCompleted)
-
-
 
 function loadCheckRaw(a, b, c, d) {
     var x = JSON.parse(b)

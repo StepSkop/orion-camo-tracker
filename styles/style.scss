@@ -86,8 +86,36 @@ header {
         width: 30%;
         justify-content: flex-end;
         align-items: center;
+        gap: 1rem;
+        label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            width: 10rem;
+            height: 3rem;
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+        }
+        
+        label:hover{
+            transition: all ease-in-out 0.1s;
+            background-color: rgba(255, 255, 255, 0.618);
+        
+        }
     }
 }
+
+
+input[type="file"] {
+    display: none;
+}
+// .fileImp {
+//     opacity: 0;
+// }
+
 #lsRemover {
     cursor: pointer;
     display: flex;
@@ -102,10 +130,11 @@ header {
 }
 
 #lsRemover:hover{
-    transition: all ease-in-out 0.25s;
+    transition: all ease-in-out 0.1s;
     background-color: rgba(189, 64, 64, 0.466);
 
 }
+
 .home {
     display: flex;
     justify-content: center;
@@ -251,6 +280,12 @@ header {
         width: min-content;
     }
     #lsRemover {
+        font-size: 0.8rem;
+    }
+    #lsExp {
+        font-size: 0.8rem;
+    }
+    #lsImp {
         font-size: 0.8rem;
     }
     header{
