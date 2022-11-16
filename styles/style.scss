@@ -245,6 +245,8 @@ input[type="file"] {
                 background-color: #222222;
                 padding: 3px 5px 3px 5px;
                 border-radius: 4px;
+
+                
             }
             
         }
@@ -315,4 +317,17 @@ input[type="file"] {
         width: 50%;
         gap: 0.5rem;
     }
+    .checkContainer { //all tiles
+
+        > div { //spec tile
+
+            .reqCont { //challenge
+
+                div { //text
+                    
+                }
+            }
+        }
+    }
+
 }

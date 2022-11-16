@@ -3,8 +3,6 @@ var maxChallenges = 367
 var requiredChallenges = 339
 var completedChallenges = 0
 
-
-
 var weaponsAlt = JSON.stringify(weapons)
 var weaponsList
 var userList
@@ -36,7 +34,6 @@ function onReaderLoad(event){
 fileInput.addEventListener('change', onChange)
 
 if (localStorage.length == 0) {
-    console.log("hi");
     userList = weapons
 } else {
     userList = JSON.parse(localStorage.getItem("userWeapons"))
@@ -157,6 +154,7 @@ function countTrue(weapons) {
     });
     return foundCompleted
 }
+
 function countPercentage(requiredChallenges, completedChallenges) {
     let percentage = 0
     percentage = Math.round(((completedChallenges / requiredChallenges) * 100) * 100) / 100
@@ -177,7 +175,6 @@ function countBar(percentage) {
 completedChallenges = countTrue(weaponsList)
 var percentage = countPercentage(requiredChallenges, completedChallenges)
 var percentageBar = countBar(percentage)
-
 
 var platinumCompletedCount
 var polyatomicCompleted = 0
@@ -248,7 +245,6 @@ weaponsList.forEach(cat => {
             gunCat.appendChild(singleGunContainer)
             
             gun.challenges.forEach(challenge => {
-        
 
                 var checker = document.createElement('div')
                 checker.classList.add(challenge.name.toLowerCase() + '-camo')   
@@ -369,8 +365,6 @@ weaponsList.forEach(cat => {
                     }
 
                     if (goldsCompleted >= cat.platReq) {
-                        
-                         
 
                         document.querySelectorAll('.'+cat.category.toLowerCase()+'-section .platinum-camo').forEach(element => {
 
@@ -402,8 +396,6 @@ weaponsList.forEach(cat => {
                         })
                     }
 
-
-                    
                     if (goldsCompleted < cat.platReq) {
                         cat.guns.forEach(gun => {
                             gun.challenges.forEach(challenge => {
@@ -455,7 +447,6 @@ weaponsList.forEach(cat => {
                                 });
                             })
                         });
-                        
                         
                     }
                     else {
