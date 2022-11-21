@@ -389,11 +389,46 @@ weaponsList.forEach(cat => {
                 }
                 
                 checker.addEventListener('click', function() {
-                    
                     var commonCompleted = 0
+                    var commonCompletedX = 0
+                    gun.challenges.forEach(challengeX => {
+                        if (challengeX.name == 'Common' && challengeX.completed == true) {
+                            commonCompletedX++
+                        }
+                    });
+
+                    
+                    
+                    
                     switch (challenge.completed) {
                         case true:
                             challenge['completed'] = false
+                            if (challenge.name == 'Platinum') {
+                                if (platinumCompleted['plat'+cat.category] != 0) {
+                                    platinumCompleted['plat'+cat.category]--
+                                }
+                            }
+
+                            if (challenge.name == 'Gold') {
+
+                                if (gun.challenges[gun.challenges.length - 2].completed == true) {
+                                    if (platinumCompleted['plat'+cat.category] != 0) {
+                                        platinumCompleted['plat'+cat.category]--
+                                    }
+
+                                }
+                                goldsCompleted--
+                                
+                            }
+
+                            if (challenge.name == "Common") {
+                                if (gun.challenges[gun.challenges.length - 2].completed == true) {
+                                    if (platinumCompleted['plat'+cat.category] != 0) {
+                                        platinumCompleted['plat'+cat.category]--
+                                    }
+                                }
+                            }
+
                             checker.style.backgroundColor = '#484848'
                             switch (checker.className) {
                                 case "polyatomic-camo":
@@ -412,15 +447,78 @@ weaponsList.forEach(cat => {
                             break;
                     
                         case false:
-                            challenge['completed'] = true
-                            checker.style.backgroundColor = 'rgb(53, 212, 63)'
+
+                            if (challenge.name == "Common") {
+                                challenge['completed'] = true
+                                checker.style.backgroundColor = 'rgb(53, 212, 63)'
+                            }
+                            if (challenge.name == "Gold") {
+
+                                
+                                
+                                if (commonCompletedX == gun.challenges.length -3) {
+                                    challenge['completed'] = true
+                                    checker.style.backgroundColor = 'rgb(53, 212, 63)'
+                                } else {
+                                    challenge['completed'] = false
+                                }
+                            }
+                           
+
+                            if (challenge.name == "Platinum") {
+                                let gunGold = false
+                                gun.challenges.forEach(challenge2 =>{
+                                    if (challenge2.name == 'Gold' && challenge2.completed == true) {
+                                        gunGold = true
+                                    }
+                                })
+                                let catGolds = 0
+                                cat.guns.forEach(gun3 => {
+                                    gun3.challenges.forEach(challenge3 => {
+                                        if (challenge3.name == 'Gold' && challenge3.completed == true) {
+                                            catGolds++
+                                        }
+                                    });
+                                })
+                                if ((catGolds >= cat.platReq) && gunGold == true) {
+                                    
+                                    challenge['completed'] = true
+                                    checker.style.backgroundColor = 'rgb(53, 212, 63)'
+                                } else {
+                                    
+                                    challenge['completed'] = false
+                                    
+                                }
+
+                            }
+                            if (challenge.name == "Polyatomic") {
+                                gun.challenges.forEach(challenge2 => {
+                                    
+                                    if (challenge2.name == "Platinum" && challenge2.completed == true) {
+                                        challenge['completed'] = true
+                                        checker.style.backgroundColor = 'rgb(53, 212, 63)'
+                                    }
+                                    else if (challenge2.name == "Platinum" && challenge2.completed == false){
+                                        
+                                        challenge['completed'] = false
+                                    }
+                                })
+                            
+                            
+
+                            } 
+                            //else {
+
+                            //     challenge['completed'] = true
+                            //     checker.style.backgroundColor = 'rgb(53, 212, 63)'
+                            // }
+                            
+                            
                             break;
                     }
 
                     
                     gun.challenges.forEach(challenge => {
-
-                        
                         if (challenge.name == 'Common' && challenge.completed == true) {
                             commonCompleted++
                         }
@@ -431,7 +529,7 @@ weaponsList.forEach(cat => {
                     if (challenge.name == 'Gold' && challenge.completed == true) {
                         goldsCompleted++
                     } else if (challenge.name == 'Gold' && challenge.completed == false) {
-                        goldsCompleted--
+                        //goldsCompleted--
                     }
                     if (commonCompleted >= gun.challenges.length - 3) {
                         
@@ -443,15 +541,22 @@ weaponsList.forEach(cat => {
                     }
                     else {
                         goldCamo.style.backgroundColor = 'rgba(255, 217, 0, 0.6)'
-                        //goldCamo.style.pointerEvents = 'none'
-                        
                     }
                     
                     if (commonCompleted != gun.challenges.length - 3) {
+
                         gun.challenges.forEach(challenge => {
+                            
                             if (challenge.name == 'Gold' && challenge.completed == true) {
+                                
                                 challenge['completed'] = false
                                 goldsCompleted--
+                                gun.challenges.forEach(challenge => {
+                                    if (challenge.name == "Platinum" && challenge.completed == true) {
+                                        //platinumCompleted['plat'+cat.category]--
+                                    }
+                                })
+                                
                             }
                         });
                     }
@@ -461,44 +566,53 @@ weaponsList.forEach(cat => {
                         platinumCompleted['plat'+cat.category]++
 
                     } else if (challenge.name == 'Platinum' && challenge.completed == false) {
-                        
-                        if (platinumCompleted['plat'+cat.category] != 0) {
-                            platinumCompleted['plat'+cat.category]--
-                        }
+                        // if (platinumCompleted['plat'+cat.category] != 0) {
+                        //     platinumCompleted['plat'+cat.category]--
+                        // }
                     }
+                    
 
                     
-                    if (goldsCompleted >= cat.platReq) {
+                    if ((goldsCompleted >= cat.platReq)) {
 
                         document.querySelectorAll('.'+cat.category.toLowerCase()+'-section .platinum-camo').forEach(element => {
-
-                            element.style.pointerEvents = 'all'
-                            if (element.style.backgroundColor == 'rgba(192, 192, 192, 0.6)') {
-                                element.style.backgroundColor = 'silver'
-                            }
-                            
-                            cat.guns.forEach(gun =>{
+                            cat.guns.forEach(gun => {
                                 gun.challenges.forEach(challenge => {
-                                    if (challenge.name == 'Gold' && challenge.completed == false)   {
-                                        var fakePlat = document.querySelector('.W'+gun.name.replace(" ",'-').replace(".","-").toLowerCase() + ' + section :nth-last-child(2)')
+                                    if (challenge.name == "Gold" && challenge.completed == true) {
+                                        element.style.pointerEvents = 'all'
+                                        if (element.style.backgroundColor == 'rgba(192, 192, 192, 0.6)') {
+                                            element.style.backgroundColor = 'silver'
+                                        }
                                         
-                                        fakePlat.style.backgroundColor = 'rgba(192, 192, 192, 0.6)'
-                                        fakePlat.style.pointerEvents = 'none'
+                                        
                                     }
-                                });
-                            })
-
-
-
+                                })
+                            });
                         });
+                        cat.guns.forEach(gun =>{
+                            gun.challenges.forEach(challenge => {
+                                
+                                if (challenge.name == 'Gold' && challenge.completed == false)   {
+                                    var fakePlat = document.querySelector('.W'+gun.name.replace(" ",'-').replace(".","-").toLowerCase() + ' + section :nth-last-child(2)')
+                                    fakePlat.style.backgroundColor = 'rgba(192, 192, 192, 0.6)'
+                                    gun.challenges[gun.challenges.length - 2].completed = false
+                                    // if (platinumCompleted['plat'+cat.category] != 0) {
+                                    //     platinumCompleted['plat'+cat.category]--
+                                    // }
+                                    //fakePlat.style.pointerEvents = 'none'
+                                }
+                            });
+                        })
                     }
                     else {
+
+
                         document.querySelectorAll('.'+cat.category.toLowerCase()+'-section .platinum-camo').forEach(element => {
                             element.style.backgroundColor = 'rgba(192, 192, 192, 0.6)'
                         })
                     }
-
-                    if (goldsCompleted < cat.platReq) {
+                    
+                    if ((goldsCompleted < cat.platReq)) {
                         cat.guns.forEach(gun => {
                             gun.challenges.forEach(challenge => {
                                 if (challenge.name == 'Platinum' && challenge.completed == true) {
@@ -506,14 +620,10 @@ weaponsList.forEach(cat => {
                                 }
                             });
                         })
-                        
                     }
 
-                    var platValues = Object.values(platinumCompleted);
-                    const platAllCount = platValues.reduce((accumulator, value) => {
-                    return accumulator + value;
-                    }, 0);
 
+                    //Poly
                     var d = platinumCompleted
                     if ((d['platAR'] >= 8) &&
                         (d['platBR'] >= 4) &&
@@ -525,63 +635,32 @@ weaponsList.forEach(cat => {
                         (d['platP'] >= 5) &&
                         (d['platRL'] >= 4) &&
                         (d['platM'] >= 2) ) {
-                        weaponsList.forEach(cat=> {
 
-
-                            document.querySelectorAll('.'+cat.category.toLowerCase()+'-section .polyatomic-camo').forEach(element => {
-                                if (element.style.backgroundColor == 'rgba(131, 2, 131, 0.6)') {
-                                    element.style.backgroundColor = 'purple'
-                                }
-                                element.style.pointerEvents = 'all'
-                            })
-                            
-                            cat.guns.forEach(gun =>{
-                                let polyatomicCompletedGun = 0
-                                var fakePlat = document.querySelector('.W'+gun.name.replace(" ",'-').replace(".","-").toLowerCase() + ' + section > div:last-child')
-                                gun.challenges.forEach(challenge => {
-                                    
-                                    if (challenge.name == 'Platinum' && challenge.completed == false)   {
-                                        console.log(gun.name);
-                                        console.log(fakePlat);
-                                        
-                                        gun.challenges.forEach(challenge => {
-                                            if (challenge.name == 'Polyatomic') {
-                                                challenge['completed'] = false
-
+                            weaponsList.forEach(cat => {
+                                cat.guns.forEach(gun => {
+                                    gun.challenges.forEach(challenge =>{
+                                        if (challenge.name == "Platinum" && challenge.completed == true) {
+                                            if (document.querySelector('.W'+gun.name.replace(" ",'-').replace(".","-").toLowerCase() + ' + section > div:last-child').style.backgroundColor == 'rgba(131, 2, 131, 0.6)') {
+                                                document.querySelector('.W'+gun.name.replace(" ",'-').replace(".","-").toLowerCase() + ' + section > div:last-child').style.backgroundColor = 'purple'
                                             }
-                                        });
-
-                                        fakePlat.style.backgroundColor = 'rgba(131, 2, 131, 0.6)'
-                                        fakePlat.style.pointerEvents = 'none'
-                                    }
-                                });
-                            })
-                        });
-                        if (challenge.name == 'Platinum' && challenge.completed == false) {
-                            var fakePlat = document.querySelector('.W'+gun.name.replace(" ",'-').replace(".","-").toLowerCase() + ' + section > div:last-child')
-                            fakePlat.style.backgroundColor = 'rgba(131, 2, 131, 0.6)'
-                            //console.log("hit");
-                            fakePlat.style.pointerEvents = 'none'
-
-                        }
-
-                        
-                    }
-                    else {
-                        weaponsList.forEach(cat => {
+                                        }
+                                    })
+                                })
+                            });
                             
-                            document.querySelectorAll('.'+cat.category.toLowerCase()+'-section .polyatomic-camo').forEach(element => {
-                                element.style.backgroundColor = 'rgba(131, 2, 131, 0.6)'
-                                //element.style.pointerEvents = 'none'
-                            })
+                    } else { 
+                        weaponsList.forEach(cat => {
                             cat.guns.forEach(gun => {
                                 gun.challenges.forEach(challenge => {
-                                    if (challenge.name == 'Polyatomic') {
-                                        challenge['completed'] = false
+                                    if (challenge.name == "Polyatomic") {
+                                        challenge["completed"]= false
                                     }
-                                });
-                            });
+                                })
+                            })
                         });
+                        document.querySelectorAll(".polyatomic-camo").forEach(polyDiv => {
+                            polyDiv.style.backgroundColor = 'rgba(131, 2, 131, 0.6)'
+                        })
                     }
                     
                     weaponsList.forEach(cat => {
@@ -590,6 +669,14 @@ weaponsList.forEach(cat => {
                         })
                     });
 
+                    if (gun.challenges[gun.challenges.length - 2].completed == false) {
+                        //document.querySelector('.W'+gun.name.replace(" ",'-').replace(".","-").toLowerCase() + ' + section > div:last-child').style.backgroundColor == 'rgba(131, 2, 131, 0.6)'
+                        document.querySelector('.W'+gun.name.replace(" ",'-').replace(".","-").toLowerCase() + ' + section > div:last-child').style.backgroundColor = 'rgba(131, 2, 131, 0.6)';
+                        gun.challenges[gun.challenges.length - 1].completed = false
+                        loadBanner(gun)
+                        
+
+                    }
                     completedChallenges = countTrue(weaponsList, false)
                     percentage = countPercentage(requiredChallenges, completedChallenges)
                     percentageBar = countBar(percentage)
