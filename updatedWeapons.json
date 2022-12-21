@@ -362,6 +362,46 @@
                         "completed": false
                     }
                 ]
+            },
+            {
+                "name": "Chimera",
+                "challenges": [
+                    {
+                        "name": "Common",
+                        "requirements": "Charcoal - Get 50 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "requirements": "Aztec - Get 20 hipfire kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "requirements": "Diabolical - Get 10 double kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "requirements": "Snow Leopard - Get 15 kills from behind",
+                        "completed": false
+                    },
+                    {
+                        "name": "Gold",
+                        "requirements": "Gold - Get 3 kills without dying 10 times",
+                        "completed": false
+                    },
+                    {
+                        "name": "Platinum",
+                        "requirements": "Platinum - Get 25 longshot kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Polyatomic",
+                        "requirements": "Polyatomic - Get 25 headshot kills",
+                        "completed": false
+                    }
+                ]
             }
         ]
     },
