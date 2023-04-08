@@ -402,6 +402,46 @@
                         "completed": false
                     }
                 ]
+            },
+            {
+                "name": "ISO Hemlock",
+                "challenges": [
+                    {
+                        "name": "Common",
+                        "requirements": "Gaseous - Get 50 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "requirements": "Cloud Hopper - Get 40 kills while ADS",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "requirements": "Lost Signal - Get 15 kills from behind",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "requirements": "Snow Leopard - Get 40 kills with supressor",
+                        "completed": false
+                    },
+                    {
+                        "name": "Gold",
+                        "requirements": "Gold - Get 3 kills without dying 10 times",
+                        "completed": false
+                    },
+                    {
+                        "name": "Platinum",
+                        "requirements": "Platinum - Get 25 longshot kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Polyatomic",
+                        "requirements": "Polyatomic - Get 25 headshot kills",
+                        "completed": false
+                    }
+                ]
             }
         ]
     },
@@ -1100,6 +1140,46 @@
                         "completed": false
                     }
                 ]
+            },
+            {
+                "name": "KV Broadside",
+                "challenges": [
+                    {
+                        "name": "Common",
+                        "requirements": "Unplumbed - Get 50 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "requirements": "Conflagration - Get 20 point blank kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "requirements": "Ethereal Rampage - Get 10 double kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "requirements": "Riot's Nest - Get 10 one-shot kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Gold",
+                        "requirements": "Gold - Get 3 kills without dying 10 times",
+                        "completed": false
+                    },
+                    {
+                        "name": "Platinum",
+                        "requirements": "Platinum - Get 25 longshot kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Polyatomic",
+                        "requirements": "Polyatomic - Get 25 headshot kills",
+                        "completed": false
+                    }
+                ]
             }
         ]
     },
@@ -1574,6 +1654,86 @@
                     {
                         "name": "Common",
                         "requirements": "Chemist Digital - Get 10 double kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Gold",
+                        "requirements": "Gold - Get 3 kills without dying 10 times",
+                        "completed": false
+                    },
+                    {
+                        "name": "Platinum",
+                        "requirements": "Platinum - Get 25 longshot kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Polyatomic",
+                        "requirements": "Polyatomic - Get 25 headshot kills",
+                        "completed": false
+                    }
+                ]
+            },
+            {
+                "name": "Crossbow",
+                "challenges": [
+                    {
+                        "name": "Common",
+                        "requirements": "Deciduous - Get 50 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "requirements": "H20 - Get 5 double kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "requirements": "Unlit Showers - Get 15 kills from behind",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "requirements": "Rad N' Rancid - Get 20 kills while prone",
+                        "completed": false
+                    },
+                    {
+                        "name": "Gold",
+                        "requirements": "Gold - Get 3 kills without dying 10 times",
+                        "completed": false
+                    },
+                    {
+                        "name": "Platinum",
+                        "requirements": "Platinum - Get 25 longshot kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Polyatomic",
+                        "requirements": "Polyatomic - Get 25 headshot kills",
+                        "completed": false
+                    }
+                ]
+            },
+            {
+                "name": "Tempus Torrent",
+                "challenges": [
+                    {
+                        "name": "Common",
+                        "requirements": "Speckled - Get 50 kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "requirements": "Oxysporum - Get 10 double kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "requirements": "Dire Growth - Get 20 mounted kills",
+                        "completed": false
+                    },
+                    {
+                        "name": "Common",
+                        "requirements": "Sandfall - Get 40 with supressor",
                         "completed": false
                     },
                     {
